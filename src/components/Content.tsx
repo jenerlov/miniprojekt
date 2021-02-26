@@ -24,7 +24,8 @@ const imgStyle:CSSProperties = {
     position: 'relative',
     alignItems: 'center',
     borderRadius: 50,
-    border: '.3rem solid yellow',
+    border: '1px solid yellow',
+    boxShadow: '0 0 3rem yellow',
     height: '20rem'
 }
 
