@@ -1,0 +1,15 @@
+/* styling for all */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3, p {
+    font-family: 'Press Start 2P', cursive;
+}
+/* 
+.backgroundImg {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+} */

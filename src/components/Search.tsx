@@ -1,5 +1,6 @@
 import React, { Component, CSSProperties } from 'react';
 import CharacterGrid from './CharacterGrid';
+import { absoluteObject } from './css';
 import Input from './input';
 
 interface Props{}
@@ -44,6 +45,7 @@ class Search extends Component<Props, State> {
         console.log(this.state.starWarsList)
         return(
             <div style={rootStyle}>
+                <h3 style={{...h1style}} >Search for a character</h3>
                 <Input 
                     value={this.state.inputValue}
                     onChange={this.handleNewInputValue}
@@ -56,10 +58,23 @@ class Search extends Component<Props, State> {
 }
 
 const rootStyle:CSSProperties = {
+    marginTop: '6rem',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    padding: '1rem'
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+}
+
+const h1style: CSSProperties = {
+    position: 'absolute',
+    color: '#472C73',
+    top: '20%',
+    textShadow: '0 0 1rem purple'
+}
+
+
   
 
 export default Search;

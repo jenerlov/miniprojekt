@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import { absoluteObject } from './css';
 import { Character } from './Search';
 
 
@@ -8,10 +9,10 @@ interface Props {
 
 function CharacterGrid(props:Props) {
     return(
-        <div style={rootStyle} >
+        <div style={{...rootStyle}} >
             {props.starWarsList.map(character => (
-                <div style={characterBoxStyle} >
-                    <h1>{ character.name }</h1>
+                <div style={{ ...characterBoxStyle}} >
+                    <h3>{ character.name }</h3>
                     <p>Birth year: { character.birth_year }</p>
                     <p>Height: { character.height }cm</p>
                     <p>Mass: { character.mass }</p>
@@ -23,28 +24,27 @@ function CharacterGrid(props:Props) {
 }
 
 const rootStyle: CSSProperties = {
-    position: 'relative',
-    zIndex: 3,
     display: 'flex',
     flexWrap: 'wrap',
-    marginTop: '10rem',
-    
+    position: 'absolute',
+    top: '30%',
+    padding: '1rem'
 }
 const characterBoxStyle: CSSProperties = {
-    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     flex: '1',
     justifyContent: 'center',
     alignItems: 'center',
-    minWidth: '30rem',
-    border: '.1rem solid yellow',
-    boxShadow: '0 0 2rem yellow',
+    minWidth: '25rem',
+    border: '1px solid #472C73',
     borderRadius: '2rem',
     margin: '1rem',
     color: 'white',
     background: 'black',
-    opacity: '70%'
+    opacity: '70%',
+    fontSize: '.7rem',
+    boxShadow: '0 0 2rem #472C73'
 }
 
 export default CharacterGrid;

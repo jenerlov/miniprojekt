@@ -1,4 +1,5 @@
 import React, { ChangeEvent, CSSProperties } from 'react';
+import { absoluteObject } from './css';
 
 interface Props {
     value: string;
@@ -12,17 +13,21 @@ function Input(props: Props) {
     }
 
     return(
-        <input style={rootStyle} value={props.value} onChange={handleInput} />
+        <input style={{...absoluteObject, ...rootStyle}} value={props.value} onChange={handleInput} />
     )
 }
 
 const rootStyle: CSSProperties = {
-    position: 'relative',
-    flex: 1,
-    borderRadius: 100,
-    padding: '0.5rem 1rem',
-    fontSize: '1rem',
-    outline: 'none'
+    width: '30%',
+    height: '5%',
+    color: '#472C73',
+    borderRadius: 50,
+    border: 'none',
+    outline: 'none',
+    textAlign: 'center',
+    left: '50%',
+    top: '27%',
+    fontSize: '1.7rem',
 };
 
 export default Input;
