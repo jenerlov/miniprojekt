@@ -8,12 +8,12 @@ interface Props {
     onMenuClick: () => void;
 }
 
+
+
 function Header(props: Props) {
 
     return(
     <div style={HeaderStyle}>
-        
-        
         <img onClick={props.onMenuClick}style={iconStyle} src={menu} alt=""/>
         <img style={imgStyle} src={logo} alt=""/>
         <div style={emptyDiv} ></div>
@@ -31,7 +31,9 @@ const HeaderStyle: CSSProperties = {
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    padding: '1rem'
+    padding: '1rem',
+    borderBottom: '1px solid #472C73',
+    boxShadow: '0 0 3rem #472C73',
 }
 
 const imgStyle:CSSProperties = {

@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+
+import React, { CSSProperties, Component } from 'react';
 import Header from './Header';
 import Content from './Content';
-import { render } from '@testing-library/react';
+import { fullScreen } from './css';
 import Navbar from './Navbar';
+
 
 interface Props {}
 interface State {
@@ -20,7 +22,8 @@ class Layout extends Component<Props, State>{
     
 render() {
     return (
-       <div>
+
+       <div style={{...fullScreen, ...rootStyle}}>
         <Header onMenuClick={this.toggleSidebar}/>
         <Content/>
         <Navbar
@@ -32,4 +35,11 @@ render() {
     );
 }
 }
+
+
+const rootStyle:CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+}
+
 export default Layout;

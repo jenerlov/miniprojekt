@@ -1,39 +1,32 @@
 import React, { CSSProperties } from 'react';
-import background from '../assets/background.png'
-import chewbacca from '../assets/chewbacca.jpg'
+import Home from './Home';
+import Search from './Search';
+import background from '../assets/background.png';
 
 
 function Content() {
     return (
+        // <div className="backgroundImg" style={{...bgStyle, backgroundImage: `url(${background})`}}></div>
         <div style={rootStyle}>
-            <img style={bgStyle} src={background} alt=""/>
-            <img style={imgStyle} src={chewbacca} alt=""/>
+            <img style={{...bgStyle}} src={background} alt=""/>
+            <Home />
+            {/* <Search /> */}
         </div>
     )
 }
 
 const rootStyle:CSSProperties = {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh'
-}
-
-const imgStyle:CSSProperties = {
-    display: 'flex',
-    position: 'relative',
-    alignItems: 'center',
-    borderRadius: 50,
-    border: '1px solid yellow',
-    boxShadow: '0 0 3rem yellow',
-    height: '20rem'
+    flexDirection: 'column',
+    height: '100%',
+    marginTop: '5rem'
 }
 
 const bgStyle:CSSProperties = {
-    position: 'absolute',
+    position: 'relative',
     width: '100%',
     height: '100%',
-    objectFit: 'cover'
+    objectFit: 'cover',
 }
 
 export default Content;
