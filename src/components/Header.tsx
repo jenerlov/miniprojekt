@@ -1,26 +1,43 @@
 import React, { CSSProperties } from 'react';
 import Navbar from './Navbar';
+import logo from '../assets/logo.png'
+
 
 
 
 function Header() {
+
     return(
     <div style={HeaderStyle}>
         <Navbar/>
-        <h1>Hangry</h1>
+        <img style={imgStyle} src={logo} alt=""/>
+        <div style={emptyDiv} ></div>
     </div>
     )
 }
 
 const HeaderStyle: CSSProperties = {
-    height: '4rem',
+    height: '6rem',
     width: '100%',
-
-    backgroundColor: 'orange',
+    position: 'fixed',
+    zIndex: 3,
+    backgroundColor: 'black',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexDirection: 'row',
-
+    padding: '1rem'
 }
+
+const imgStyle:CSSProperties = {
+    height: '5rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+}
+
+const emptyDiv:CSSProperties = {
+    width: '2rem'
+}
+
+
 export default Header;
