@@ -1,16 +1,40 @@
 import React, { CSSProperties } from 'react';
-import menu from '../assets/menu.png'
 
-function Navbar() {
+interface Props {
+    isOpen: boolean;
+    onSidebarClose: () => void;
+}
+
+
+function Navbar(props: Props) {
     return(
-        <img style={iconStyle} src={menu} alt=""/>
-    )
+        <aside
+     
+        style={rootStyle(props)}
+        onClick={props.onSidebarClose}
+    >
+        <h2>Home</h2>
+        <h2>Pricing</h2>
+        <h2>About Us</h2>
+        <h2>Contact</h2>
+    </aside>
+);
+    
 }
 
-const iconStyle: CSSProperties = {
-    width: '2rem',
-    cursor: 'pointer'
-}
-
+const rootStyle = (props: Props): CSSProperties => ({
+    position: 'fixed',
+    left: props.isOpen ? 0 : '-100%',
+    top: 0,
+    bottom: 0,
+    width: '100%',
+    background: props.isOpen ? 'black' : 'transparent',
+    color: 'white',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'all 1s'
+})
 export default Navbar;
 
