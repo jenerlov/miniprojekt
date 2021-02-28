@@ -1,14 +1,16 @@
 import React, { CSSProperties } from 'react';
 import background from '../assets/background.png'
 import chewbacca from '../assets/chewbacca.jpg'
+import Items from './Items';
 
 
 function Content() {
-    const sectionIds = ['charachters', 'planets'];
+   
     return (
         <div style={rootStyle}>
-            <img style={bgStyle} src={background} alt=""/>
-            <img style={imgStyle} src={chewbacca} alt=""/>
+             <img style={bgStyle} src={background} alt=""/> 
+            <Items/>  
+            {/* <img style={imgStyle} src={chewbacca} alt=""/>  */}
         </div>
     )
 }
@@ -20,15 +22,15 @@ const rootStyle:CSSProperties = {
     height: '100vh'
 }
 
-const imgStyle:CSSProperties = {
-    display: 'flex',
-    position: 'relative',
-    alignItems: 'center',
-    borderRadius: 50,
-    border: '1px solid yellow',
-    boxShadow: '0 0 3rem yellow',
-    height: '20rem'
-}
+//  const imgStyle:CSSProperties = {
+//      display: 'flex',
+//      position: 'relative',
+//      alignItems: 'center',
+//      borderRadius: 50,
+//      border: '1px solid yellow',
+//      boxShadow: '0 0 3rem yellow',
+//      height: '20rem'
+//  }
 
 const bgStyle:CSSProperties = {
     position: 'absolute',
