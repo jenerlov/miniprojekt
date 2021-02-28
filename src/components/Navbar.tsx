@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
     isOpen: boolean;
@@ -9,14 +10,18 @@ interface Props {
 function Navbar(props: Props) {
     return(
         <aside
-     
-        style={rootStyle(props)}
-        onClick={props.onSidebarClose}
-    >
-        <h2>Home</h2>
-        <h2>Pricing</h2>
-        <h2>About Us</h2>
-        <h2>Contact</h2>
+            style={rootStyle(props)}
+            onClick={props.onSidebarClose}
+        >
+        <Link to="/">
+            <h2>Home</h2>
+        </Link>
+        <Link to="info">
+            <h2>info</h2>
+        </Link>
+        <Link to="search">
+            <h2>Search</h2>
+        </Link>
     </aside>
 );
     

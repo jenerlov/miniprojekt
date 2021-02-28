@@ -2,6 +2,7 @@ import React, { CSSProperties } from 'react';
 import Home from './Home';
 import Search from './Search';
 import background from '../assets/background.png';
+import { Route, Switch } from 'react-router-dom';
 
 
 function Content() {
@@ -9,8 +10,14 @@ function Content() {
         // <div className="backgroundImg" style={{...bgStyle, backgroundImage: `url(${background})`}}></div>
         <div style={rootStyle}>
             <img style={{...bgStyle}} src={background} alt=""/>
-            <Home />
-            {/* <Search /> */}
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/search">
+                    <Search />
+                </Route>
+            </Switch>
         </div>
     )
 }
