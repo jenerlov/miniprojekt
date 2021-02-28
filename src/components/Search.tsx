@@ -66,9 +66,9 @@ const rootStyle:CSSProperties = {
 
 const h1style: CSSProperties = {
     position: 'absolute',
-    color: '#472C73',
+    color: 'white',
     top: '20%',
-    textShadow: '0 0 1rem purple',
+    textShadow: '0 0 1rem yellow',
 }
 
 

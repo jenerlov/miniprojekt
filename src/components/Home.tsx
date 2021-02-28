@@ -4,10 +4,10 @@ import { borderPurple, absoluteObject } from './css';
 
 function Home () {
     return(
-        <button style={{...rootStyle, ...imgStyle, ...absoluteObject}}>
-            press here
-        </button>
-        // <img style={{...rootStyle, ...imgStyle, ...borderPurple, ...absoluteObject}} src={chewbacca} alt=""/>
+        // <button style={{...rootStyle, ...imgStyle, ...absoluteObject}}>
+        //     press here
+        // </button>
+        <img style={{...rootStyle, ...imgStyle, ...borderPurple, ...absoluteObject}} src={chewbacca} alt=""/>
     )
 }
 

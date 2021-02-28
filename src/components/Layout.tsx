@@ -2,7 +2,6 @@
 import React, { CSSProperties, Component } from 'react';
 import Header from './Header';
 import Content from './Content';
-import { fullScreen } from './css';
 import Navbar from './Navbar';
 
 
@@ -23,7 +22,7 @@ class Layout extends Component<Props, State>{
 render() {
     return (
 
-       <div style={{...fullScreen, ...rootStyle}}>
+       <div style={{...rootStyle}}>
         <Header onMenuClick={this.toggleSidebar}/>
         <Content/>
         <Navbar
@@ -40,6 +39,7 @@ render() {
 const rootStyle:CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
+    height: '100vh'
 }
 
 export default Layout;
