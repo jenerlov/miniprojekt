@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { absoluteObject } from './css';
+// import { absoluteObject } from './css';
 import { Character } from './Search';
 
 

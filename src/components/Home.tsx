@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
 import chewbacca from '../assets/chewbacca.jpg'
-import Search from './Search';
 import { borderPurple, absoluteObject } from './css';
 
 function Home () {

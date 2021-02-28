@@ -1,6 +1,5 @@
 import React, { Component, CSSProperties } from 'react';
 import CharacterGrid from './CharacterGrid';
-import { absoluteObject } from './css';
 import Input from './input';
 
 interface Props{}
