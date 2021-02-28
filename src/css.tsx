@@ -6,9 +6,7 @@ export const fullScreen: CSSProperties = {
 }
 
 
-export const centerContainer: CSSProperties = {
-
-        
+export const centerContainer: CSSProperties = {    
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
