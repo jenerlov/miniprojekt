@@ -13,18 +13,19 @@ function Navbar(props: Props) {
             style={rootStyle(props)}
             onClick={props.onSidebarClose}
         >
-        <Link to="/">
-            <h2>Home</h2>
-        </Link>
-        <Link to="info">
-            <h2>info</h2>
-        </Link>
-        <Link to="search">
-            <h2>Search</h2>
-        </Link>
-    </aside>
-);
-    
+            <div>
+                <Link to="/" style={linkStyle}>
+                    <h2>Home</h2>
+                </Link>
+                <Link to="info" style={linkStyle}>
+                    <h2>Info</h2>
+                </Link>
+                <Link to="search" style={linkStyle}>
+                    <h2>Search</h2>
+                </Link>
+            </div>
+        </aside>
+    );  
 }
 
 const rootStyle = (props: Props): CSSProperties => ({
@@ -37,9 +38,18 @@ const rootStyle = (props: Props): CSSProperties => ({
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
-    transition: 'all 1s'
+    alignItems: 'center',
+    transition: 'all 1s',
 })
+
+const linkStyle: CSSProperties = {
+    textDecoration: 'none',
+    color: '#472C73',
+    textShadow: '0 0 1rem #472C73',
+    fontFamily: 'Press Start 2P',
+    padding: '.5rem',
+}
+
 export default Navbar;
 
