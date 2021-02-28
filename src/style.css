@@ -14,3 +14,8 @@ h3, h2, p {
     background-repeat: no-repeat;
     background-position: top left;
 } */
+
+.hover:hover {
+    color: white;
+    text-shadow: 0 0 1rem yellow;
+}

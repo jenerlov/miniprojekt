@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
+import '../style.css'
 
 interface Props {
     isOpen: boolean;
@@ -15,13 +16,13 @@ function Navbar(props: Props) {
         >
             <div>
                 <Link to="/" style={linkStyle}>
-                    <h2>Home</h2>
+                    <h2  className="hover">Home</h2>
                 </Link>
                 <Link to="info" style={linkStyle}>
-                    <h2>Info</h2>
+                    <h2 className="hover">Info</h2>
                 </Link>
                 <Link to="search" style={linkStyle}>
-                    <h2>Search</h2>
+                    <h2 className="hover">Search</h2>
                 </Link>
             </div>
         </aside>
