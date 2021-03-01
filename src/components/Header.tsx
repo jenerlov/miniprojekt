@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
-import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo4.png'
 import menu from '../assets/menu.png'
 
 interface Props {
@@ -11,7 +12,9 @@ function Header(props: Props) {
     return(
         <div style={rootStyle}>
             <img onClick={props.onMenuClick}style={iconStyle} src={menu} alt=""/>
-            <img style={imgStyle} src={logo} alt=""/>
+            <Link to ="/">
+                <img style={imgStyle} src={logo} alt=""/>
+            </Link>
             <div style={emptyDiv} ></div>
         </div>
     )
@@ -33,7 +36,7 @@ const rootStyle: CSSProperties = {
 }
 
 const imgStyle:CSSProperties = {
-    height: '5rem',
+    height: '9rem',
     alignItems: 'center',
     justifyContent: 'center',
 }

@@ -12,15 +12,17 @@ function CharacterGrid(props:Props) {
         <div style={{...rootStyle}} >
             {props.starWarsList.map(character => (
                 <div style={{ ...characterBoxStyle}} >
-                    <h3>{ character.name }</h3>
-                    <p>Birth year: { character.birth_year }</p>
-                    <p>Height: { character.height }cm</p>
-                    <p>Mass: { character.mass }</p>
-                    <p>Eye color: { character.eye_color }</p>
+                    <h3 style={nameStyle}>{ character.name }</h3>
+                    <div style={textStyle}>
+                        <p>Birth year: { character.birth_year }</p>
+                        <p>Height: { character.height }cm</p>
+                        <p>Mass: { character.mass }</p>
+                        <p>Eye color: { character.eye_color }</p>
+                    </div>
                 </div>
             ))}
         </div>
-    )
+    );
 }
 
 const rootStyle: CSSProperties = {
@@ -44,7 +46,19 @@ const characterBoxStyle: CSSProperties = {
     background: 'black',
     opacity: '70%',
     fontSize: '.7rem',
-    boxShadow: '0 0 2rem #472C73'
+    boxShadow: '0 0 2rem #472C73',
+    padding: '.3rem'
+}
+
+const textStyle:CSSProperties = {
+    textAlign: 'left',
+    fontSize: '.7rem',
+    lineHeight: '1rem'
+}
+
+const nameStyle:CSSProperties = {
+    fontSize: '1rem',
+    paddingBottom: '.2rem'
 }
 
 export default CharacterGrid;
