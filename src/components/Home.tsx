@@ -1,5 +1,5 @@
 import React, { Component, CSSProperties } from 'react';
-import chewbacca from '../assets/chewbacca.jpg'
+import chewbacca from '../assets/trap.jpg'
 import { borderPurple, absoluteObject } from './css';
 import WelcomeImg from './WelcomeImg';
 import '../style.css'
