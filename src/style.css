@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-h3, p {
+h3, h2, p {
     font-family: 'Press Start 2P', cursive;
+    /* font-family: 'VT323', monospace; */
 }
 /* 
 .backgroundImg {
@@ -13,3 +14,8 @@ h3, p {
     background-repeat: no-repeat;
     background-position: top left;
 } */
+
+.hover:hover {
+    color: white;
+    text-shadow: 0 0 1rem yellow;
+}

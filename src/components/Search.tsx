@@ -57,8 +57,6 @@ class Search extends Component<Props, State> {
 }
 
 const rootStyle:CSSProperties = {
-    marginTop: '6rem',
-    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -68,9 +66,9 @@ const rootStyle:CSSProperties = {
 
 const h1style: CSSProperties = {
     position: 'absolute',
-    color: '#472C73',
+    color: 'white',
     top: '20%',
-    textShadow: '0 0 1rem purple'
+    textShadow: '0 0 1rem yellow',
 }
 
 

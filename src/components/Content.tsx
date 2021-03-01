@@ -31,7 +31,7 @@ const rootStyle:CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    marginTop: '5rem'
+    marginTop: '5rem',
 }
 
 const bgStyle:CSSProperties = {

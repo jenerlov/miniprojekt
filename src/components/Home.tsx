@@ -4,15 +4,15 @@ import { borderPurple, absoluteObject } from './css';
 
 function Home () {
     return(
-        <div style={{...rootStyle}}>
-            <img style={{...imgStyle, ...borderPurple, ...absoluteObject}} src={chewbacca} alt=""/>
-        </div>
+        // <button style={{...rootStyle, ...imgStyle, ...absoluteObject}}>
+        //     press here
+        // </button>
+        <img style={{...rootStyle, ...imgStyle, ...borderPurple, ...absoluteObject}} src={chewbacca} alt=""/>
     )
 }
 
 const rootStyle:CSSProperties = {
     marginTop: '6rem',
-    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
