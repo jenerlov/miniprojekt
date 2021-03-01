@@ -8,7 +8,7 @@ import film4 from '../assets/film4.jpg';
 import film5 from '../assets/film5.jpg';
 import film6 from '../assets/film6.jpg';
 import film7 from '../assets/film7.jpg';
-import film8 from '../assets/film8.jpg';
+import film8 from '../assets/film8.png';
 import film9 from '../assets/film9.jpeg';
 import { absoluteObject } from './css';
 
