@@ -10,33 +10,35 @@ import film6 from '../assets/film6.jpg';
 import film7 from '../assets/film7.jpg';
 import film8 from '../assets/film8.jpg';
 import film9 from '../assets/film9.jpeg';
+import { absoluteObject } from './css';
 
 function filmer (){
     return(
-        <div>
+        <div style={{...absoluteObject, ...scren}}>
           
-        <img style={filmscreen} src={film1} alt="" /> 
-        <img style={filmscreen} src={film2} alt="" /> 
-        <img style={filmscreen} src={film3} alt="" /> 
-        <img style={filmscreen} src={film31} alt="" /> 
-        <img style={filmscreen} src={film32} alt="" /> 
-        <img style={filmscreen} src={film4} alt="" /> 
-        <img style={filmscreen} src={film5} alt="" /> 
-        <img style={filmscreen} src={film6} alt="" /> 
-        <img style={filmscreen} src={film7} alt="" /> 
-        <img style={filmscreen} src={film8} alt="" /> 
-        <img style={filmscreen} src={film9} alt="" /> 
+        <img style={filmescren} src={film1} alt="" /> 
+        <img style={filmescren} src={film2} alt="" /> 
+        <img style={filmescren} src={film3} alt="" /> 
+        <img style={filmescren} src={film31} alt="" /> 
+        <img style={filmescren} src={film32} alt="" /> 
+        <img style={filmescren} src={film4} alt="" /> 
+        <img style={filmescren} src={film5} alt="" /> 
+        <img style={filmescren} src={film6} alt="" /> 
+        <img style={filmescren} src={film7} alt="" /> 
+        <img style={filmescren} src={film8} alt="" /> 
+        <img style={filmescren} src={film9} alt="" /> 
         </div>
     )
 }
-const filmscreen: CSSProperties = {
-    width: '15%',
-    height: '15',
-    objectFit: 'cover',
-    position: 'relative',
-    zIndex: 200,
-    
-
+const filmescren: CSSProperties = {
+    height: '10rem',
+    marginTop: '10rem',
+  
  }
-
+const scren: CSSProperties={
+    top: '30%',
+    left:'50rem',
+    display:'flex',
+    flexWrap: 'wrap',
+}
 export default filmer;
