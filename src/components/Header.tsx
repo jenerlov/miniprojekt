@@ -1,22 +1,23 @@
 import React, { CSSProperties } from 'react';
-import Navbar from './Navbar';
 import logo from '../assets/logo.png'
+import menu from '../assets/menu.png'
 
+interface Props {
+    onMenuClick: () => void;
+}
 
-
-
-function Header() {
+function Header(props: Props) {
 
     return(
-    <div style={HeaderStyle}>
-        <Navbar/>
-        <img style={imgStyle} src={logo} alt=""/>
-        <div style={emptyDiv} ></div>
-    </div>
+        <div style={rootStyle}>
+            <img onClick={props.onMenuClick}style={iconStyle} src={menu} alt=""/>
+            <img style={imgStyle} src={logo} alt=""/>
+            <div style={emptyDiv} ></div>
+        </div>
     )
 }
 
-const HeaderStyle: CSSProperties = {
+const rootStyle: CSSProperties = {
     height: '6rem',
     width: '100%',
     position: 'fixed',
@@ -26,7 +27,9 @@ const HeaderStyle: CSSProperties = {
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    padding: '1rem'
+    padding: '1rem',
+    borderBottom: '1px solid #472C73',
+    boxShadow: '0 0 3rem #472C73',
 }
 
 const imgStyle:CSSProperties = {
@@ -39,5 +42,9 @@ const emptyDiv:CSSProperties = {
     width: '2rem'
 }
 
+const iconStyle: CSSProperties = {
+    width: '2rem',
+    cursor: 'pointer'
+}
 
 export default Header;
