@@ -3,9 +3,11 @@ import Home from './Home';
 import Search from './Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
+import Items from './Items';
 
 
 function Content() {
+   
     return (
         // <div className="backgroundImg" style={{...bgStyle, backgroundImage: `url(${background})`}}></div>
         <div style={rootStyle}>
@@ -13,6 +15,9 @@ function Content() {
             <Switch>
                 <Route exact path="/">
                     <Home />
+                </Route>
+                <Route path ="/info">
+                    <Items/>
                 </Route>
                 <Route path="/search">
                     <Search />
