@@ -4,7 +4,7 @@ import Search from './Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
 import Items from './Items';
-
+import Filmer from './Filmerna'
 
 function Content() {
    
@@ -21,6 +21,9 @@ function Content() {
                 </Route>
                 <Route path="/search">
                     <Search />
+                </Route>
+                <Route path="/Filmer">
+                    < Filmer/>
                 </Route>
             </Switch>
         </div>
