@@ -19,3 +19,8 @@ h1, h3, h2, p {
     color: white;
     text-shadow: 0 0 1rem yellow;
 }
+
+.hoverLink:hover {
+    color: #472C73;
+    text-shadow: 0 0 3rem white;
+}

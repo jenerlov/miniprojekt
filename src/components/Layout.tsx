@@ -3,6 +3,7 @@ import React, { CSSProperties, Component } from 'react';
 import Header from './Header';
 import Content from './Content';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 interface Props {}
@@ -29,7 +30,7 @@ render() {
           isOpen={this.state.isSidebarOpen}
           onSidebarClose={this.toggleSidebar}
         />
-        
+        <Footer />
         </div>
     );
 }
