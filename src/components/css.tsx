@@ -8,7 +8,7 @@ export const fullScreen: CSSProperties = {
 export const borderPurple: CSSProperties= {
    borderRadius: 50,
    border: '.1rem solid #472C73',
-   boxShadow: '0 0 3rem #472C73'
+   boxShadow: '0 0 6rem #472C73'
 }
 
 export const absoluteObject: CSSProperties = {

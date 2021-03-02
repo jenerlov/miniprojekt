@@ -1,18 +1,42 @@
-import React, { CSSProperties } from 'react';
-import chewbacca from '../assets/chewbacca.jpg'
+import React, { Component, CSSProperties } from 'react';
+import chewbacca from '../assets/trap.jpg'
 import { borderPurple, absoluteObject } from './css';
+import WelcomeImg from './WelcomeImg';
+import '../style.css'
 
-function Home () {
-    return(
-        // <button style={{...rootStyle, ...imgStyle, ...absoluteObject}}>
-        //     press here
-        // </button>
-        <img style={{...rootStyle, ...imgStyle, ...borderPurple, ...absoluteObject}} src={chewbacca} alt=""/>
-    )
+interface Props {}
+interface State {
+    isImgVisable: boolean;
+}
+class Home extends Component<Props, State> {
+
+    state: State = {
+        isImgVisable: false
+    }
+
+    showImg = () => {
+        this.setState({ isImgVisable: true })
+    }
+
+    hideImg = () => {
+        this.setState({ isImgVisable: false })
+    }
+
+    render() {
+        return(
+            <div style={{...rootStyle, ...positionCenter, ...absoluteObject}}>
+                <h2 className="hover" style={textStyle} onClick={this.showImg}>I dare you to <br/> press here...</h2>
+                {this.state.isImgVisable ? (
+                    <WelcomeImg removeImg={this.hideImg}>
+                        <img style={{...borderPurple, ...cursor}} src={chewbacca} alt=""/> 
+                    </WelcomeImg>
+                ): null}
+            </div>
+        );
+    }
 }
 
 const rootStyle:CSSProperties = {
-    marginTop: '6rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -20,11 +44,19 @@ const rootStyle:CSSProperties = {
     textAlign: 'center',
 }
 
-const imgStyle:CSSProperties = {
+const positionCenter:CSSProperties = {
     left: '50%',
     top: '55%',
 }
 
+const textStyle:CSSProperties = {
+    color: 'white',
+    cursor: 'pointer'
+}
+
+const cursor:CSSProperties = {
+    cursor: 'pointer'
+}
 
 export default Home;
 

@@ -53,7 +53,6 @@ class Search extends Component<Props, State> {
             </div>
         );
     }
-
 }
 
 const rootStyle:CSSProperties = {
