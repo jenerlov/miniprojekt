@@ -1,53 +1,45 @@
 import React, {CSSProperties} from 'react';
 import characters from '../assets/characters.jpg';
-import planets from '../assets/planets.jpg';
 
 
 
 function Items() {
-
+    
     return (
-        <div style={{...imgDiv}}>
-        <img style={fullscreen} src={characters}  alt="" />
-        <img style={fullscreen} src={planets} alt="" /> 
-        <img style={fullscreen} src={characters} alt="" /> 
-        <img style={fullscreen} src={planets} alt="" /> 
-         <h2 style={{...imgText, ...textPosition}}></h2>
-       
-    </div>
-
-    );
+        <div style={{...imgContainer, ...centeredAbsolute}}>
+            
+            <img src={characters} alt="" style={imgStyle}/>
+            <img src={characters} alt="" style={imgStyle}/>
+            <img src={characters} alt="" style={imgStyle}/>
+            <img src={characters} alt="" style={imgStyle}/>    
+        </div>
+    )   
 }
 
-const imgDiv: CSSProperties = {
+const imgContainer: CSSProperties = {
     position: 'relative',
-     margin: '0.5rem',
-     height: '20rem',
-     width: '40rem',      
-       
-    }
+    margin: 0,
+    height: '15rem',
+    left: '50%',
+    top: '50%',
     
- const fullscreen: CSSProperties = {
-    width: '100%',
-    height: '100%',
+    display: 'flex',
+    justifyContent: 'center', 
+}
+const centeredAbsolute: CSSProperties = {
+    position: 'absolute',
     objectFit: 'cover',
-    //position: 'absolute',
+    marginTop: '5rem',
+    transform: 'translate(-50%, -50%)',
+}
 
- }
+const imgStyle: CSSProperties = {
+    width: '80%',
+    height: '80%',
+    padding: '.5rem',  
+}
 
 
- const textPosition: CSSProperties = {
-     position: 'absolute',
-     margin: 0,
-     left: '50%',
-     top: '50%',
-     transform: 'translate(-50%, -50%)'
- }
-
- const imgText: CSSProperties = {
-    color: 'white',
-    
- }
 
 export default Items;
 
