@@ -3,6 +3,7 @@ import chewbacca from '../assets/trap.jpg'
 import { borderPurple, absoluteObject } from './css';
 import WelcomeImg from './WelcomeImg';
 import '../style.css'
+import ErrorBoundary from './ErrorBoundary';
 
 interface Props {}
 interface State {
@@ -23,6 +24,8 @@ class Home extends Component<Props, State> {
     }
 
     render() {
+
+        //(null as any).abc
         return(
             <div style={{...rootStyle, ...positionCenter, ...absoluteObject}}>
                 <h2 className="hover" style={textStyle} onClick={this.showImg}>I dare you to <br/> press here...</h2>

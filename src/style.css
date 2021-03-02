@@ -24,3 +24,8 @@ h1, h3, h2, p {
     color: #472C73;
     text-shadow: 0 0 3rem white;
 }
+
+.error-hover:hover {
+    color: rgb(19, 18, 18);
+    text-shadow: 0 0 1rem black;
+}

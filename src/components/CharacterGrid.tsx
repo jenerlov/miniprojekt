@@ -7,7 +7,7 @@ interface Props {
     starWarsList: Character[]
 }
 
-function CharacterGrid(props:Props) {
+function CharacterGrid(props:Props) {    
     return(
         <div style={{...rootStyle}} >
             {props.starWarsList.map(character => (
