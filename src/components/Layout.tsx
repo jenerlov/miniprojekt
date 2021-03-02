@@ -24,13 +24,13 @@ render() {
     return (
 
        <div style={{...rootStyle}}>
-        <Header onMenuClick={this.toggleSidebar}/>
-        <Content/>
-        <Navbar
-          isOpen={this.state.isSidebarOpen}
-          onSidebarClose={this.toggleSidebar}
-        />
-        <Footer />
+          <Header onMenuClick={this.toggleSidebar}/>
+          <Content/>
+          <Navbar
+            isOpen={this.state.isSidebarOpen}
+            onSidebarClose={this.toggleSidebar}
+          />
+          <Footer />
         </div>
     );
 }
