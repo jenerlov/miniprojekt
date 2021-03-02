@@ -15,7 +15,6 @@ import { absoluteObject } from './css';
 function filmer (){
     return(
         <div style={{...absoluteObject, ...scren}}>
-          
         <img style={filmescren} src={film1} alt="" /> 
         <img style={filmescren} src={film2} alt="" /> 
         <img style={filmescren} src={film3} alt="" /> 
