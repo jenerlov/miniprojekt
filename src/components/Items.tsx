@@ -1,17 +1,17 @@
 import React, {CSSProperties} from 'react';
 import characters from '../assets/characters.jpg';
-import planets from '../assets/planets.jpg';
+
 
 
 function Items() {
+    
     return (
         <div style={{...imgContainer, ...centeredAbsolute}}>
-            <div>
-                <img src={characters} alt="" style={imgStyle}/>
-            </div>
-            <div>
+            
             <img src={characters} alt="" style={imgStyle}/>
-            </div>
+            <img src={characters} alt="" style={imgStyle}/>
+            <img src={characters} alt="" style={imgStyle}/>
+            <img src={characters} alt="" style={imgStyle}/>    
         </div>
     )   
 }
@@ -19,26 +19,27 @@ function Items() {
 const imgContainer: CSSProperties = {
     position: 'relative',
     margin: 0,
+    height: '15rem',
     left: '50%',
     top: '50%',
-    transform: 'translate(-50%, -50%)',
-
-    display: 'flex',
-    justifyContent: 'center',
     
-
+    display: 'flex',
+    justifyContent: 'center', 
 }
- const centeredAbsolute: CSSProperties = {
-     position: 'absolute',
-     marginTop: '5rem',
-     objectFit: 'cover',
- }
+const centeredAbsolute: CSSProperties = {
+    position: 'absolute',
+    objectFit: 'cover',
+    marginTop: '5rem',
+    transform: 'translate(-50%, -50%)',
+}
 
 const imgStyle: CSSProperties = {
-    width: '100%',
-    height: '100%',
-      
+    width: '80%',
+    height: '80%',
+    padding: '.5rem',  
 }
+
+
 
 export default Items;
 
