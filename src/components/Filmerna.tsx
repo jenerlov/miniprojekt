@@ -1,15 +1,15 @@
 import React, { CSSProperties } from 'react';
-import film1 from '../assets/film1.jpg';
-import film2 from '../assets/film2.jpg';
-import film3 from '../assets/film3.jpg';
-import film31 from '../assets/film31.jpg';
-import film32 from '../assets/film32.jpg';
-import film4 from '../assets/film4.jpg';
-import film5 from '../assets/film5.jpg';
-import film6 from '../assets/film6.jpg';
-import film7 from '../assets/film7.jpg';
-import film8 from '../assets/film8.png';
-import film9 from '../assets/film9.jpeg';
+import film1 from '../assets/movies/film1.jpg';
+import film2 from '../assets/movies/film2.jpg';
+import film3 from '../assets/movies/film3.jpg';
+import film31 from '../assets/movies/film31.jpg';
+import film32 from '../assets/movies/film32.jpg';
+import film4 from '../assets/movies/film4.jpg';
+import film5 from '../assets/movies/film5.jpg';
+import film6 from '../assets/movies/film6.jpg';
+import film7 from '../assets/movies/film7.jpg';
+import film8 from '../assets/movies/film8.png';
+import film9 from '../assets/movies/film9.jpeg';
 
 const openModal = () =>{
     alert('test');
