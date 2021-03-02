@@ -29,3 +29,10 @@ h1, h3, h2, p {
     color: rgb(19, 18, 18);
     text-shadow: 0 0 1rem black;
 }
+
+@media screen and (max-width: 1084px) {
+    body {
+      background-image: url('./assets/background.png');
+    }
+  }
+

@@ -22,6 +22,7 @@ class Layout extends Component<Props, State>{
     
 render() {
     return (
+
         <div style={{...rootStyle}}>
           <Header onMenuClick={this.toggleSidebar}/>
           <ErrorBoundary>
@@ -35,8 +36,8 @@ render() {
           </div>
       );
   }
-}
 
+}
 
 const rootStyle:CSSProperties = {
     display: 'flex',
