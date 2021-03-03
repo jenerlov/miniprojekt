@@ -1,16 +1,15 @@
 import React, { CSSProperties, Props, useDebugValue } from 'react';
-import Home from './Home';
-import Search from './Search';
+import Home from './home/Home';
+import Search from './search/Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
 import Items from './Items';
 import ErrorBoundary from './ErrorBoundary';
-import MovieList from './MovieList';
+import MovieList from './movie/MovieList';
 
 
 
 function Content() {
-
 
     return (
         <div style={rootStyle}>

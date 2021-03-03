@@ -2,6 +2,7 @@ import React, { Component, CSSProperties, ErrorInfo } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import yoda from '../assets/yodaError.png';
 import '../style.css'
+import { absoluteObject } from './css';
 
 interface Props extends RouteComponentProps{}
 
@@ -30,7 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
     render() {
         if (this.state.hasError) {
             return (
-                <div style={rootStyle}>
+                <div style={{...rootStyle, ...absoluteObject}}>
                     <p style={textStyle}>"The greatest teacher, failure is" <br/> -Yoda </p>
                     <img style={imgStyle} src={yoda} alt=""/>
                     <h3 className="error-hover" style={buttonStyle} onClick={this.goBackButton}>Press here to go back</h3>
@@ -49,7 +50,9 @@ const rootStyle:CSSProperties = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '1rem'
+    padding: '1rem',
+    top: '50%',
+    left: '50%'
 }
 
 const imgStyle:CSSProperties = {
