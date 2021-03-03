@@ -4,7 +4,7 @@ import Planets from '../assets/info-pic/Planets.jpg';
 import Ships from '../assets/info-pic/Ships.jpg';
 import PlanetsMap from '../assets/info-pic/planetsmap.jpg'
 import PlanetModal from './PlanetModal';
-import { absoluteObject } from './css';
+import { absoluteObject} from './css';
 import GalaxyModal from './GalaxyModal';
 import ShipsModal from './ShipsModal';
 
@@ -45,7 +45,8 @@ class InfoSite extends Component <Props,State> {
             {this.state.isInfoDivOpen ? ( 
                 <PlanetModal closeDiv ={this.closeInfoDiv}>    
                 <div style={modalContainer}>
-               {<img src={PlanetsMap} alt=""></img>}  
+                <img style={planetStyle} src={PlanetsMap} alt=""/> 
+              
                  </div> 
              
                 </PlanetModal>
@@ -62,9 +63,7 @@ class InfoSite extends Component <Props,State> {
             {this.state.isInfoDivOpen ? ( 
                 <ShipsModal closeDiv ={this.closeInfoDiv}> 
               <div style={modalContainer}>
-                  <div style={container}>
-                   
-                  </div>
+               
               </div>
                 </ShipsModal>
           ): null
@@ -95,7 +94,7 @@ const imgContainer: CSSProperties = {
 //  }
 
 const imgStyle: CSSProperties = {
-    width: '30%',
+    width: '25%',
     height: '80%',
     padding: '.5rem',  
     cursor: 'pointer',
@@ -103,25 +102,22 @@ const imgStyle: CSSProperties = {
 
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
     
 }
 
 const modalContainer: CSSProperties = {
-    position: 'relative',
+    zIndex: 10,
+    padding: '1rem',
+    background: 'rgba(0,0,0,0.7)',
     height: '100%',
     width: '100%',
    
-  
 }
 
-const container: CSSProperties = {
-   
-    width: '50rem',
-    height: '100%',
-    marginTop: '4rem',
+const planetStyle:CSSProperties = {
     left: '50%',
     top: '50%',
-    
 }
 
 const textStyle: CSSProperties = {
