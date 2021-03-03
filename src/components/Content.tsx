@@ -3,7 +3,7 @@ import Home from './Home';
 import Search from './Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
-import Items from './Items';
+import InfoSite from './infoSite';
 
 
 function Content() {
@@ -17,8 +17,9 @@ function Content() {
                     <Home />
                 </Route>
                 <Route path ="/info">
-                    <Items/>
+                <InfoSite/>
                 </Route>
+                
                 <Route path="/search">
                     <Search />
                 </Route>
