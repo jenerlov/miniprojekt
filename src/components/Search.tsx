@@ -3,6 +3,7 @@ import CharacterGrid from './CharacterGrid';
 import ErrorBoundary from './ErrorBoundary';
 import Input from './input';
 
+
 interface Props{}
 
 interface State{
@@ -40,7 +41,7 @@ class Search extends Component<Props, State> {
             console.log(error);
         }
     }
-
+    
     render() {
         return(
             <div style={rootStyle}>
@@ -83,8 +84,8 @@ interface StarResponse {
 
 export interface Character {
     name: string;
-    height: string,
-    mass: string,
-    birth_year: string,
-    eye_color: string
+    height: string;
+    mass: string;
+    birth_year: string;
+    eye_color: string;
 }
