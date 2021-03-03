@@ -21,6 +21,9 @@ function Navbar(props: Props) {
                 <Link to="info" style={linkStyle}>
                     <h2 className="hover">Info</h2>
                 </Link>
+                <Link to="movies" style={linkStyle}>
+                    <h2 className="hover">Movies</h2>
+                </Link>
                 <Link to="search" style={linkStyle}>
                     <h2 className="hover">Search</h2>
                 </Link>
