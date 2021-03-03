@@ -1,5 +1,6 @@
 import React, { Component, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
+import { absoluteObject } from './css';
 
 interface Props {
     persistant?: boolean;
@@ -32,7 +33,7 @@ class MovieModal extends Component<Props> {
         return ReactDOM.createPortal(
             <div 
                 onClick={this.handleOnclick}
-                style={rootStyle}
+                style={{...rootStyle, ...absoluteObject}}
             >
                 {this.props.children}
             </div>,
@@ -42,10 +43,12 @@ class MovieModal extends Component<Props> {
 }
 
 const rootStyle:CSSProperties = {
-    width: '100%',
-    height: '100%',
-    color: 'red',
-    background: 'white'
+    width: '70%',
+    color: 'white',
+    background: 'black',
+    top: '50%',
+    left: '50%',
+    padding: '1.5rem',
 }
 
 export default MovieModal;
