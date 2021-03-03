@@ -13,7 +13,7 @@ class PlanetModal extends Component <Props> {
     constructor(props: Props) {
         super(props);
         this.element = document.createElement('div');
-        this.element.id = 'info.Div';
+        this.element.id = 'planet.div';
     };
 imgClicked =  () => {
     if(this.props.persistent) return;

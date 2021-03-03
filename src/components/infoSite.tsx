@@ -44,8 +44,8 @@ class InfoSite extends Component <Props,State> {
            
             {this.state.isInfoDivOpen ? ( 
                 <PlanetModal closeDiv ={this.closeInfoDiv}>    
-                <div>
-               <img src={PlanetsMap} alt="" style={modalContainer}></img>    
+                <div style={modalContainer}>
+               {<img src={PlanetsMap} alt=""></img>}  
                  </div> 
              
                 </PlanetModal>
@@ -53,7 +53,9 @@ class InfoSite extends Component <Props,State> {
           }
                {this.state.isInfoDivOpen ? ( 
                 <GalaxyModal closeDiv ={this.closeInfoDiv}> 
-              <div style={modalContainer}></div>
+                 <div style={modalContainer}>
+                   <p style={textStyle}>hejhejhej</p>
+              </div>
                 </GalaxyModal>
           ): null
          }
@@ -82,32 +84,38 @@ const imgContainer: CSSProperties = {
     
     display: 'flex',
     justifyContent: 'center', 
-    overflowY: 'hidden',
+
 }
- const centeredAbsolute: CSSProperties = {
-    position: 'absolute',
-    objectFit: 'cover',
-    marginTop: '5rem',
-    transform: 'translate(-50%, -50%)',
-    overflowY: 'hidden',
- }
+//  const centeredAbsolute: CSSProperties = {
+//     position: 'absolute',
+//     objectFit: 'cover',
+//     marginTop: '5rem',
+//     transform: 'translate(-50%, -50%)',
+//     overflowY: 'hidden',
+//  }
 
 const imgStyle: CSSProperties = {
     width: '30%',
     height: '80%',
     padding: '.5rem',  
     cursor: 'pointer',
-    border: 'solid .2rem #472C73'
+    border: 'solid 2px #472C73',
+
+    display: 'flex',
+    justifyContent: 'center',
+    
 }
 
 const modalContainer: CSSProperties = {
+    position: 'relative',
     height: '100%',
     width: '100%',
-    background: 'black',
+   
   
 }
 
 const container: CSSProperties = {
+   
     width: '50rem',
     height: '100%',
     marginTop: '4rem',
@@ -116,8 +124,8 @@ const container: CSSProperties = {
     
 }
 
-
-
-
+const textStyle: CSSProperties = {
+    color: 'black',
+}
 export default InfoSite;
 
