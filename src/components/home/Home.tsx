@@ -1,9 +1,8 @@
 import React, { Component, CSSProperties } from 'react';
-import trap from '../assets/trap.jpg'
-import { borderPurple, absoluteObject } from './css';
+import trap from '../../assets/trap.jpg'
+import { borderPurple, absoluteObject } from '../css';
 import WelcomeImg from './WelcomeImg';
-import '../style.css'
-import ErrorBoundary from './ErrorBoundary';
+import '../../style.css'
 
 interface Props {}
 interface State {
@@ -24,7 +23,6 @@ class Home extends Component<Props, State> {
     }
 
     render() {
-
         return(
             <div style={{...rootStyle, ...positionCenter, ...absoluteObject}}>
                 <h2 className="hover" style={textStyle} onClick={this.showImg}>I dare you to <br/> press here...</h2>

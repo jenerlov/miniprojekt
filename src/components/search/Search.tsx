@@ -1,6 +1,7 @@
 import React, { Component, CSSProperties } from 'react';
+import ErrorBoundary from '../ErrorBoundary';
 import CharacterGrid from './CharacterGrid';
-import ErrorBoundary from './ErrorBoundary';
+
 import Input from './input';
 
 

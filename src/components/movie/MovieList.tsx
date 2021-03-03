@@ -1,18 +1,18 @@
 import React, { Component, CSSProperties } from 'react';
-import movie1 from '../assets/movies/movie1.jpg';
-import movie2 from '../assets/movies/movie2.jpg';
-import movie3 from '../assets/movies/movie3.jpg';
-import movie4 from '../assets/movies/movie31.jpg';
-import movie5 from '../assets/movies/movie32.jpg';
-import movie6 from '../assets/movies/movie4.jpg';
-import movie7 from '../assets/movies/movie5.jpg';
-import movie8 from '../assets/movies/movie6.jpg';
-import movie9 from '../assets/movies/movie7.jpg';
-import movie10 from '../assets/movies/movie8.jpg';
-import movie11 from '../assets/movies/movie9.jpg';
-import movie12 from '../assets/movies/coming.jpg';
+import movie1 from '../../assets/movies/movie1.jpg';
+import movie2 from '../../assets/movies/movie2.jpg';
+import movie3 from '../../assets/movies/movie3.jpg';
+import movie4 from '../../assets/movies/movie31.jpg';
+import movie5 from '../../assets/movies/movie32.jpg';
+import movie6 from '../../assets/movies/movie4.jpg';
+import movie7 from '../../assets/movies/movie5.jpg';
+import movie8 from '../../assets/movies/movie6.jpg';
+import movie9 from '../../assets/movies/movie7.jpg';
+import movie10 from '../../assets/movies/movie8.jpg';
+import movie11 from '../../assets/movies/movie9.jpg';
+import movie12 from '../../assets/movies/coming.jpg';
 import MovieModal from './MovieModal';
-import '../style.css'
+import '../../style.css'
 
 interface Props{
     movies: Movie[]
@@ -35,7 +35,6 @@ class MovieList extends Component<Props, State> {
     }
 
     render() {
-        
         return(
             <div style={rootStyle}>
                 <div style={centerDiv}>
