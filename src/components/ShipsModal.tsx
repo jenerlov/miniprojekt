@@ -1,12 +1,13 @@
 import { Component, CSSProperties } from "react";
 import ReactDOM from "react-dom";
+import { absoluteObject } from "./css";
 
 interface Props {
     persistent?: boolean;
     closeDiv: () => void;  
 }
 
-class infoModal extends Component <Props> {
+class ShipsModal extends Component <Props> {
     element: HTMLDivElement;
 
     constructor(props: Props) {
@@ -15,10 +16,10 @@ class infoModal extends Component <Props> {
         this.element.id = 'info.Div';
     };
 imgClicked =  () => {
-    if(!this.props.persistent){
-     (this.props.closeDiv());
+    if(this.props.persistent) return;
+     this.props.closeDiv();
     }
-}
+
   
     componentDidMount() {
         document.body.appendChild(this.element);
@@ -32,7 +33,7 @@ imgClicked =  () => {
         return ReactDOM.createPortal(
             <div 
             onClick={this.imgClicked}
-            style={infoStyle}
+            style={{...infoStyle, ...absoluteObject}}
         >
             {this.props.children}
             </div>,
@@ -44,10 +45,12 @@ imgClicked =  () => {
 const infoStyle: CSSProperties = {
     width: '100%',
     height: '100%',
+    top: '50%',
+    left: '50%',
 
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'white',
 }
 
-export default infoModal;
+export default ShipsModal;
