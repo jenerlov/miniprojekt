@@ -3,9 +3,10 @@ import Home from './home/Home';
 import Search from './search/Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
-import Items from './Items';
+import InfoSite from './infoSite';
 import ErrorBoundary from './ErrorBoundary';
 import MovieList from './movie/MovieList';
+
 
 
 
@@ -15,12 +16,13 @@ function Content() {
         <div style={rootStyle}>
             <img style={{...bgStyle}} src={background} alt=""/>
             <Switch>
+
                 <ErrorBoundary>
                     <Route exact path="/">
                         <Home />
                     </Route>
                     <Route path ="/info">
-                        <Items/>
+                         <InfoSite/>
                     </Route>
                     <Route path="/movies">
                         <MovieList movies={[]}/>
@@ -29,6 +31,7 @@ function Content() {
                         <Search />
                     </Route>
                 </ErrorBoundary>
+
             </Switch>
         </div>
     )
