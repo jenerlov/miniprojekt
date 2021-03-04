@@ -8,12 +8,6 @@ h1, h3, h2, p {
     font-family: 'Press Start 2P', cursive;
     /* font-family: 'VT323', monospace; */
 }
-/* 
-.backgroundImg {
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top left;
-} */
 
 .hover:hover {
     color: white;
@@ -30,9 +24,8 @@ h1, h3, h2, p {
     text-shadow: 0 0 1rem black;
 }
 
-@media screen and (max-width: 1084px) {
-    body {
-      background-image: url('./assets/background.png');
-    }
-  }
+body {
+    background-image: url('./assets/background.png');
+}
+
 

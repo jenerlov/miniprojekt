@@ -32,7 +32,7 @@ class PlanetSite extends Component <Props,State> {
     return (
         <div style={{...imgContainer,...absoluteObject}}>
             <img src={Planets} alt="" style={imgStyle} onClick={this.openInfoDiv}/>
-                <p style={{...absoluteObject, ...textStyle}}> Click here for planets</p>
+                <p style={{...absoluteObject, ...textStyle}}> Click here</p>
             {this.state.isInfoDivOpen ? ( 
                 <PlanetModal closeDiv ={this.closeInfoDiv}>    
                 <div style={modalContainer}>
@@ -63,8 +63,7 @@ const imgContainer: CSSProperties = {
 
 
 const imgStyle: CSSProperties = {
-    width: '25%',
-    height: '80%',  
+    width: '40%', 
     cursor: 'pointer',
     borderRadius: '3rem',
     boxShadow: '0 0 3rem white',
@@ -83,13 +82,13 @@ const modalContainer: CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-      
 }
 
 const planetStyle:CSSProperties = {
-    height: '25rem',
+    width: '70%',
     left: '50%',
     top: '50%',
+    objectFit: 'cover'
        
 }
 
