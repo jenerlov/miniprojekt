@@ -1,28 +1,37 @@
-import React, { CSSProperties } from 'react';
-import Home from './Home';
-import Search from './Search';
+import React, { CSSProperties, Props, useDebugValue } from 'react';
+import Home from './home/Home';
+import Search from './search/Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
 import InfoSite from './infoSite';
+import ErrorBoundary from './ErrorBoundary';
+import MovieList from './movie/MovieList';
+
+
 
 
 function Content() {
-   
+
     return (
-        // <div className="backgroundImg" style={{...bgStyle, backgroundImage: `url(${background})`}}></div>
         <div style={rootStyle}>
             <img style={{...bgStyle}} src={background} alt=""/>
             <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path ="/info">
-                <InfoSite/>
-                </Route>
-                
-                <Route path="/search">
-                    <Search />
-                </Route>
+
+                <ErrorBoundary>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path ="/info">
+                         <InfoSite/>
+                    </Route>
+                    <Route path="/movies">
+                        <MovieList movies={[]}/>
+                    </Route>
+                    <Route path="/search">
+                        <Search />
+                    </Route>
+                </ErrorBoundary>
+
             </Switch>
         </div>
     )
@@ -40,6 +49,12 @@ const bgStyle:CSSProperties = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+}
+
+const style:CSSProperties = {
+    height: '100%',
+    width: '100%',
+    zIndex: 100
 }
 
 export default Content;

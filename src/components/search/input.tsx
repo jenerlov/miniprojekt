@@ -1,5 +1,6 @@
 import React, { ChangeEvent, CSSProperties } from 'react';
-import { absoluteObject } from './css';
+import { absoluteObject } from '../css';
+
 
 interface Props {
     value: string;

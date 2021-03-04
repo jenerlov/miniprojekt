@@ -1,8 +1,9 @@
-
 import React, { CSSProperties, Component } from 'react';
 import Header from './Header';
 import Content from './Content';
 import Navbar from './Navbar';
+import Footer from './Footer';
+import ErrorBoundary from './ErrorBoundary';
 
 
 interface Props {}
@@ -22,19 +23,21 @@ class Layout extends Component<Props, State>{
 render() {
     return (
 
-       <div style={{...rootStyle}}>
-        <Header onMenuClick={this.toggleSidebar}/>
-        <Content/>
-        <Navbar
-          isOpen={this.state.isSidebarOpen}
-          onSidebarClose={this.toggleSidebar}
-        />
-        
-        </div>
-    );
-}
-}
+        <div style={{...rootStyle}}>
+          <Header onMenuClick={this.toggleSidebar}/>
+          <ErrorBoundary>
+            <Content/>
+          </ErrorBoundary>
+          <Navbar
+            isOpen={this.state.isSidebarOpen}
+            onSidebarClose={this.toggleSidebar}
+          />
+          <Footer />
+          </div>
+      );
+  }
 
+}
 
 const rootStyle:CSSProperties = {
     display: 'flex',

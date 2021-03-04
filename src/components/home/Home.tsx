@@ -1,8 +1,8 @@
 import React, { Component, CSSProperties } from 'react';
-import chewbacca from '../assets/trap.jpg'
-import { borderPurple, absoluteObject } from './css';
+import trap from '../../assets/trap.jpg'
+import { borderPurple, absoluteObject } from '../css';
 import WelcomeImg from './WelcomeImg';
-import '../style.css'
+import '../../style.css'
 
 interface Props {}
 interface State {
@@ -28,7 +28,7 @@ class Home extends Component<Props, State> {
                 <h2 className="hover" style={textStyle} onClick={this.showImg}>I dare you to <br/> press here...</h2>
                 {this.state.isImgVisable ? (
                     <WelcomeImg removeImg={this.hideImg}>
-                        <img style={{...borderPurple, ...cursor}} src={chewbacca} alt=""/> 
+                        <img style={{...borderPurple, ...cursor}} src={trap} alt=""/> 
                     </WelcomeImg>
                 ): null}
             </div>

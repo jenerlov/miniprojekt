@@ -7,7 +7,7 @@ interface Props {
     starWarsList: Character[]
 }
 
-function CharacterGrid(props:Props) {
+function CharacterGrid(props:Props) {    
     return(
         <div style={{...rootStyle}} >
             {props.starWarsList.map(character => (
@@ -30,7 +30,7 @@ const rootStyle: CSSProperties = {
     flexWrap: 'wrap',
     position: 'absolute',
     top: '30%',
-    padding: '1rem'
+    padding: '1rem',
 }
 const characterBoxStyle: CSSProperties = {
     display: 'flex',
@@ -38,7 +38,7 @@ const characterBoxStyle: CSSProperties = {
     flex: '1',
     justifyContent: 'center',
     alignItems: 'center',
-    minWidth: '25rem',
+    minWidth: '20rem',
     border: '1px solid #472C73',
     borderRadius: '2rem',
     margin: '1rem',

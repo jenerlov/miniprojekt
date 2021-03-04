@@ -1,6 +1,9 @@
 import React, { Component, CSSProperties } from 'react';
+import ErrorBoundary from '../ErrorBoundary';
 import CharacterGrid from './CharacterGrid';
+
 import Input from './input';
+
 
 interface Props{}
 
@@ -39,9 +42,8 @@ class Search extends Component<Props, State> {
             console.log(error);
         }
     }
-
+    
     render() {
-        console.log(this.state.starWarsList)
         return(
             <div style={rootStyle}>
                 <h3 style={{...h1style}} >Search for a character</h3>
@@ -49,7 +51,9 @@ class Search extends Component<Props, State> {
                     value={this.state.inputValue}
                     onChange={this.handleNewInputValue}
                 />
-                <CharacterGrid starWarsList={this.state.starWarsList}/>
+                <ErrorBoundary>
+                    <CharacterGrid starWarsList={this.state.starWarsList}/>
+                </ErrorBoundary>
             </div>
         );
     }
@@ -81,8 +85,8 @@ interface StarResponse {
 
 export interface Character {
     name: string;
-    height: string,
-    mass: string,
-    birth_year: string,
-    eye_color: string
+    height: string;
+    mass: string;
+    birth_year: string;
+    eye_color: string;
 }
