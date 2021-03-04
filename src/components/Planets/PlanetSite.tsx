@@ -1,13 +1,8 @@
 import React, { Component, CSSProperties} from 'react';
-import Galaxy from '../assets/info-pic/thegalaxy.png';
-import Planets from '../assets/info-pic/Planets.jpg';
-import PlanetsMap from '../assets/info-pic/planetsmap.jpg'
+import Planets from '../../assets/info-pic/Planets.jpg';
+import PlanetsMap from '../../assets/info-pic/planetsmap.jpg'
+import { absoluteObject } from '../css';
 import PlanetModal from './PlanetModal';
-import { absoluteObject} from './css';
-
-
-
-
 
 
 
@@ -16,7 +11,7 @@ interface State {
     isInfoDivOpen: boolean
 }
 
-class InfoSite extends Component <Props,State> {
+class PlanetSite extends Component <Props,State> {
 
     state: State = {
         isInfoDivOpen: false
@@ -24,12 +19,12 @@ class InfoSite extends Component <Props,State> {
     }
 
   
-openInfoDiv = () => {
+    openInfoDiv = () => {
         this.setState({ isInfoDivOpen: true})      
             
     }
 
- closeInfoDiv = () => {
+    closeInfoDiv = () => {
         this.setState({ isInfoDivOpen: false})
     }
 
@@ -37,7 +32,7 @@ openInfoDiv = () => {
     return (
         <div style={{...imgContainer,...absoluteObject}}>
             <img src={Planets} alt="" style={imgStyle} onClick={this.openInfoDiv}/>
-                
+                <p style={{...absoluteObject, ...textStyle}}> Click here for planets</p>
             {this.state.isInfoDivOpen ? ( 
                 <PlanetModal closeDiv ={this.closeInfoDiv}>    
                 <div style={modalContainer}>
@@ -69,11 +64,11 @@ const imgContainer: CSSProperties = {
 
 const imgStyle: CSSProperties = {
     width: '25%',
-    height: '80%',
-    padding: '.5rem',  
+    height: '80%',  
     cursor: 'pointer',
-    border: 'solid 2px #472C73',
- 
+    borderRadius: '3rem',
+    boxShadow: '0 0 3rem white',
+    objectFit: 'cover',
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
@@ -81,7 +76,6 @@ const imgStyle: CSSProperties = {
 }
 
 const modalContainer: CSSProperties = {
-    padding: '1rem',
     position: 'relative',
     height: '100%',
     width: '100%',
@@ -93,13 +87,17 @@ const modalContainer: CSSProperties = {
 }
 
 const planetStyle:CSSProperties = {
+    height: '25rem',
     left: '50%',
     top: '50%',
        
 }
 
 const textStyle: CSSProperties = {
-    color: 'black',
+    left: '50%',
+    top: '50%',
+    color: 'white',
+    fontSize: '.8rem',
 }
-export default InfoSite;
+export default PlanetSite;
 
