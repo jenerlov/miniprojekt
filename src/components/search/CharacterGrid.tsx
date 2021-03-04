@@ -30,7 +30,8 @@ const rootStyle: CSSProperties = {
     flexWrap: 'wrap',
     position: 'absolute',
     top: '30%',
-    padding: '1rem',
+    padding: '1rem 1rem 4rem 1rem',
+    overflowY: 'auto',
 }
 const characterBoxStyle: CSSProperties = {
     display: 'flex',
@@ -47,7 +48,8 @@ const characterBoxStyle: CSSProperties = {
     opacity: '70%',
     fontSize: '.7rem',
     boxShadow: '0 0 2rem #472C73',
-    padding: '.3rem'
+    padding: '.3rem',
+    overflowY: 'auto'
 }
 
 const textStyle:CSSProperties = {

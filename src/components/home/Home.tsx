@@ -42,6 +42,7 @@ const rootStyle:CSSProperties = {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    overflowY: 'hidden',
 }
 
 const positionCenter:CSSProperties = {

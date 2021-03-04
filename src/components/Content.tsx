@@ -51,10 +51,4 @@ const bgStyle:CSSProperties = {
     objectFit: 'cover',
 }
 
-const style:CSSProperties = {
-    height: '100%',
-    width: '100%',
-    zIndex: 100
-}
-
 export default Content;

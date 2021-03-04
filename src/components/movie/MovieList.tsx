@@ -63,21 +63,22 @@ const rootStyle:CSSProperties = {
     position: 'absolute',
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: '5rem',
-    overflowY: 'auto'
+    paddingTop: '3rem',
 }
 
 const centerDiv:CSSProperties = {
     width: '70%',
-    height: '90%',
+    height: '80%',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    overflowY: 'auto'
 }
 
 const imgDiv:CSSProperties={
     height: '15rem',
     width: '10rem',
+    marginBottom: '2rem'
 }
 
 const imgStyle:CSSProperties = {
@@ -86,7 +87,7 @@ const imgStyle:CSSProperties = {
     objectFit: 'cover',
     border: '2px solid #472C73',
     borderRadius: 10,
-    boxShadow: '0 0 1rem #472C73'
+    boxShadow: '0 0 1rem #472C73',
 }
 
 const textStyle:CSSProperties = {

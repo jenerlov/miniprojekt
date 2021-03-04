@@ -14,8 +14,12 @@ const rootStyle:CSSProperties = {
     justifyContent: 'flex-end',
     background: 'black',
     height: '3rem',
+    width: '100%',
     paddingTop: '1.5rem',
-    paddingRight: '1rem'
+    paddingRight: '1rem',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
 }
 
 const linkStyle:CSSProperties = {
