@@ -1,11 +1,10 @@
 import React, { Component, CSSProperties} from 'react';
-import Galaxy from '../assets/info-pic/Galaxy.png';
+import Galaxy from '../assets/info-pic/thegalaxy.png';
 import Planets from '../assets/info-pic/Planets.jpg';
-import Ships from '../assets/info-pic/Ships.jpg';
 import PlanetsMap from '../assets/info-pic/planetsmap.jpg'
 import PlanetModal from './PlanetModal';
 import { absoluteObject} from './css';
-import GalaxyModal from './GalaxyModal';
+
 
 
 
@@ -21,9 +20,11 @@ class InfoSite extends Component <Props,State> {
 
     state: State = {
         isInfoDivOpen: false
+
     }
+
   
-    openInfoDiv = () => {
+openInfoDiv = () => {
         this.setState({ isInfoDivOpen: true})      
             
     }
@@ -32,34 +33,20 @@ class InfoSite extends Component <Props,State> {
         this.setState({ isInfoDivOpen: false})
     }
 
-
-
     render() {
     return (
         <div style={{...imgContainer,...absoluteObject}}>
-            <img src={Planets} alt="" style={imgStyle} onClick={this.openInfoDiv }/>
-            <img src={Galaxy} alt="" style={imgStyle} onClick={this.openInfoDiv}/>    
-              
-           
-           
+            <img src={Planets} alt="" style={imgStyle} onClick={this.openInfoDiv}/>
+                
             {this.state.isInfoDivOpen ? ( 
                 <PlanetModal closeDiv ={this.closeInfoDiv}>    
                 <div style={modalContainer}>
-                <img style={{...planetStyle, ...absoluteObject}} alt="" src={PlanetsMap}></img>
+                <img style={planetStyle} alt="" src={PlanetsMap}></img>
               </div> 
-             
                 </PlanetModal>
           ): null
-          }
-               {this.state.isInfoDivOpen ? ( 
-                <GalaxyModal closeDiv ={this.closeInfoDiv}> 
-                 <div style={modalContainer}>
-                   <span style={textStyle}></span>
-              </div>
-                </GalaxyModal>
-          ): null
-         }
-          
+        
+            }
 </div>
 );
 }}
@@ -74,16 +61,11 @@ const imgContainer: CSSProperties = {
     top: '50%',
    
     display: 'flex',
-    justifyContent: 'center', 
+    alignItems: 'center',
+    justifyContent: 'center',
 
 }
-//  const centeredAbsolute: CSSProperties = {
-//     position: 'absolute',
-//     objectFit: 'cover',
-//     marginTop: '5rem',
-//     transform: 'translate(-50%, -50%)',
-//     overflowY: 'hidden',
-//  }
+
 
 const imgStyle: CSSProperties = {
     width: '25%',
@@ -94,18 +76,15 @@ const imgStyle: CSSProperties = {
  
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    flexWrap: 'wrap',
     
 }
 
 const modalContainer: CSSProperties = {
     padding: '1rem',
     position: 'relative',
-    background: 'rgb(0,0,0,0.9)',
-    opacity: '0.9',
     height: '100%',
     width: '100%',
-    zIndex: 1,
 
     display: 'flex',
     justifyContent: 'center',

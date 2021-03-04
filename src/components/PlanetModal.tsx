@@ -50,7 +50,7 @@ const infoStyle: CSSProperties = {
 
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    
 }
 
 export default PlanetModal;
