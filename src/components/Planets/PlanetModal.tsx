@@ -1,6 +1,6 @@
 import { Component, CSSProperties } from "react";
 import ReactDOM from "react-dom";
-import { absoluteObject } from "./css";
+import { absoluteObject } from "../css";
 
 interface Props {
     persistent?: boolean;

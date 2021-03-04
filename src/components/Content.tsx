@@ -3,9 +3,9 @@ import Home from './home/Home';
 import Search from './search/Search';
 import background from '../assets/background.png';
 import { Route, Switch } from 'react-router-dom';
-import InfoSite from './infoSite';
 import ErrorBoundary from './ErrorBoundary';
 import MovieList from './movie/MovieList';
+import PlanetSite from './Planets/PlanetSite';
 
 
 
@@ -21,8 +21,8 @@ function Content() {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path ="/info">
-                         <InfoSite/>
+                    <Route path ="/planets">
+                         <PlanetSite/>
                     </Route>
                     <Route path="/movies">
                         <MovieList movies={[]}/>

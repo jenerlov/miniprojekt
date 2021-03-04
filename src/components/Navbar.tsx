@@ -18,8 +18,8 @@ function Navbar(props: Props) {
                 <Link to="/" style={linkStyle}>
                     <h2  className="hover">Home</h2>
                 </Link>
-                <Link to="info" style={linkStyle}>
-                    <h2 className="hover">Info</h2>
+                <Link to="planets" style={linkStyle}>
+                    <h2 className="hover">Planets</h2>
                 </Link>
                 <Link to="movies" style={linkStyle}>
                     <h2 className="hover">Movies</h2>
